@@ -1,0 +1,22 @@
+.todo__item {
+  transition: all 0.3s ease-in-out;
+}
+
+.todo__item:hover {
+  transition: all 0.3s ease-in-out;
+  color: gray;
+}
+.error-field {
+  background-color: rgb(247, 58, 58);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+.button-submit {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  margin-left: auto;
+}

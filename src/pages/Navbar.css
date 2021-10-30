@@ -1,0 +1,20 @@
+.nav-link {
+    background: none;
+    border: none;
+    padding: 1rem 1rem;
+}
+
+.navbar {
+    padding: 0px
+}
+
+.nav-link.active {
+    background: black;
+    border: none;
+    padding: 1rem 1rem;
+}
+
+.navbar-dark .navbar-brand {
+    background: none;
+    border: none;
+}

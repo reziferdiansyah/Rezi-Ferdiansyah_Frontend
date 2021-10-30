@@ -1,0 +1,16 @@
+body {
+    padding-top: 0;
+}
+
+.alert-primary {
+    text-align: center;
+}
+
+.alert-primary .alert-link {
+    background: none;
+    border: none;
+}
+
+bg {
+    background: whitesmoke;
+    }
