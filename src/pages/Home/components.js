@@ -20,7 +20,6 @@ import Form from "./form";
 import { toastObj } from "utils";
 
 export default function Card() {
-  const [username, setUsername] = useState("");
   const [data, setData] = useState([]);
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
@@ -36,7 +35,7 @@ export default function Card() {
     request
       .post("/post/create", { content })
       .then(() => toast(toastObj("Create post success")))
-      .then(() => toast(toastObj("Network Error", "error")))
+      .catch(() => toast(toastObj("Network Error", "error")))
       .finally(() => {
         setContent("");
         setIsLoading(false);
@@ -69,10 +68,6 @@ export default function Card() {
       .finally(() => {
         setIsLoading(false);
       });
-    request.get("/user/get").then((res) => {
-      setUsername(res.data.data.username);
-      localStorage.setItem("username", res.data.data.username);
-    });
     return () => {
       isMounted = false;
     };
@@ -127,7 +122,6 @@ export default function Card() {
                         </Portal>
                       </Menu>
                     </Stack>
-                    <h5>{username}</h5>
                     <p className="card-text">{item.content}</p>
                   </div>
                   <div className="card-header">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logologin from "assets/images/image.png";
 import request from "actions/connect";
-import { Box, Text, Flex, Image ,} from "@chakra-ui/react";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
 
 export default function List() {
   const [username, setUsername] = useState("");
@@ -23,8 +23,8 @@ export default function List() {
         }
       })
       .catch((err) => {
-        const errRespon = err?.response?.data?.msg
-        setError( errRespon|| "Network Error");
+        const errRespon = err?.response?.data?.msg;
+        setError(errRespon || "Network Error");
       })
       .finally(() => setIsLoading(false));
   };
@@ -50,10 +50,11 @@ export default function List() {
           )}
           <br />
           <div className="mb-3">
-            <label htmlFor="usename" className="form-label">
+            <label htmlFor="username" className="form-label">
               Username
             </label>
             <input
+              type="Username"
               className="form-control"
               id="usename"
               aria-describedby="emailHelp"
